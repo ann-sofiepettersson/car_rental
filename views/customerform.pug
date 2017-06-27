@@ -1,0 +1,42 @@
+extends index
+
+block content
+	div.customer-box
+		h1 Registrera dig
+		// register form
+		form(method='POST' action='/customer')
+			.row
+				.col-sm-6
+					div.form-group
+						label(for='name') Namn:
+						input#name.form-control(type='text', placeholder='Förnamn' name='name')
+				.col-sm-6
+					div.form-group
+						label(for='surname') Efternamn:
+						input#surname.form-control(type='text', placeholder='Efternamn' name='name')
+			.row
+				.col-sm-12
+					div.form-group
+						label(for='address') Adress:
+						input#address.form-control(type='text', placeholder='Adress' name='address')
+			.row
+				.col-sm-6
+					div.form-group
+						label(for='zip') Postnummer:
+						input#zip.form-control(type='text', placeholder='Postnummer' name='zip')
+				.col-sm-6
+					div.form-group
+						label(for='city') Postadress:
+						input#city.form-control(type='text', placeholder='Postadress' name='city')
+			.row
+				.col-sm-6
+					div.form-group
+						label(for='email') Email:
+						input#email.form-control(type='email', placeholder='namn@email.com' name='email')
+				.col-sm-6
+					div.form-group
+						label(for='phone') Telefon:
+						input#phone.form-control(type='text', placeholder='Telefon' name='phone')
+			.row
+				.col-sm-12
+					button.btn.btn-primary.form-control(type='submit') Send

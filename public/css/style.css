@@ -1,0 +1,201 @@
+body,
+footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.background-img {
+    background-image: url('../images/bakgrundsbild5.jpg');
+    background-size: cover;
+    height: 100%;
+    background-position: center;
+}
+
+
+/*NAVBAR*/
+
+.navbar-default {
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav li a {
+    color: #3a3737 !important;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-nav li a:hover {
+    color: #736f6f !important;
+}
+
+.nav-bar>li.active>a {
+    background-color: #b1a0a0;
+    border: 1px solid #b1a0a0;
+}
+
+.nav-bar>li.active>a:focus,
+.nav-bar>li.active>a:hover {
+    background-color: #dacfcf;
+    border: 1px solid #dacfcf;
+}
+
+.nav-bar>li>a:focus,
+.nav-bar>li>a:hover {
+    background-color: #dacfcf;
+    border: 1px solid #dacfcf;
+}
+
+
+/********CONTENT********/
+
+.container {
+    margin-top: 20px;
+    background: rgba(177, 160, 160, 0.4);
+}
+
+
+/*INDEX*/
+
+.search-box {
+    margin: 40px 10%;
+    padding: 30px;
+}
+
+.search-box label {
+    margin-right: 5px;
+}
+
+#searchForm {
+    padding-top: 20px;
+}
+
+.search-box .row {
+    margin-bottom: 20px;
+}
+
+
+/*.col-sm-6,
+.col-sm-12,
+.row {
+    justify-content: center;
+}*/
+
+li {
+    list-style-type: none;
+}
+
+a {
+    color: #555;
+    text-decoration: none;
+}
+
+a:hover,
+a:active {
+    color: #555;
+    text-decoration: none;
+}
+
+input[type=date]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    display: none;
+}
+
+input[type=checkbox] {
+    margin: 0 5px 0 0 !important;
+    position: inherit !important;
+}
+
+.search-btn {
+    width: 80%;
+}
+
+@media screen and (max-width: 768px) {
+    .btn {
+        width: 80%;
+    }
+}
+
+
+/*CARLIST*/
+
+#newSearch,
+#addCarForm,
+#backToList {
+    margin: 10px 0;
+}
+
+.list-box {
+    margin: 5px;
+}
+
+.carlist-item {
+    border: 1px solid #ab9f9f;
+    background-color: rgba(220, 212, 209, 0.7);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.carlist-item .row {
+    display: flex;
+    margin: 10px 0;
+}
+
+.carlist-item span {
+    list-style-type: none;
+    color: #403939;
+    display: inline;
+}
+
+.carlist-item img {
+    height: 150px;
+    width: 200px;
+}
+
+
+/*ADMIN*/
+
+.glyphicon {
+    margin-right: 5px;
+}
+
+.btn-default {
+    color: #333;
+    background-color: #a9a7a7;
+    border-color: #a9a7a7;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #708fab;
+    border-color: #708fab;
+}
+
+.btn-danger {
+    color: #fff;
+    background-color: #ce7875;
+    border-color: #ce7875;
+}
+
+
+/*CUSTOMERFORM*/
+
+.customer-box {
+    margin: 40px 10%;
+}
+
+
+/*FOOTER*/
+
+footer {
+    bottom: 0;
+    position: absolute;
+    color: whitesmoke;
+    width: 100%;
+}
+
+footer span {
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}

@@ -1,0 +1,43 @@
+extends index
+
+block content
+    div.list-box
+        a#addCarForm.btn.btn-default.btn-block(href='/adminaddcar', role='button')
+             | Lägg till ny bil
+        each car in cars
+            form(action='/removecar/:id', method='POST')
+                .row.carlist-item
+                    .col-sm-6.col-md-3.col-lg-3
+                        img(src=(car.img_url))
+                    .col-sm-6.col-md-9.col-lg-9
+                        .row
+                            .col-sm-12.col-md-4.col-lg-4
+                                span Märke: #{car.brand}
+                            .col-sm-12.col-md-4.col-lg-4
+                                span Model: #{car.model}
+                            .col-sm-12.col-md-4.col-lg-4
+                                span Årsmodell: #{car.year}
+                        .row
+                            .col-sm-12.col-md-4.col-lg-4
+                                span Takräcke: #{car.roofrack}
+                            .col-sm-12.col-md-4.col-lg-4
+                                span Växellåda: #{car.gearbox}
+                            .col-sm-12.col-md-4.col-lg-4
+                                span Storlek: #{car.seats}
+                        .row
+                            .col-sm-12.col-md-4.col-lg-4
+                                span Regnr: #{car.regnr}
+                            .col-sm-12.col-md-4.col-lg-4
+                                span#fr Från: #{car.from}
+                            .col-sm-12.col-md-4.col-lg-4
+                                spann#to Till: #{car.to}
+                        .row
+                            .col-sm-12.col-md-4.col-lg-4
+                                span Pris: #{car.price}
+                            .col-sm-12.col-md-4.col-lg-4
+                                a#editCar.btn.btn-default.btn-block(href='/admineditcar/' + car.id, role='button') Ändra
+                            .col-sm-12.col-md-4.col-lg-4
+                                a#removeCar.btn.btn-danger.btn-block(href='/removecar/' + car.id , role='button') Ta bort den här bilen
+                        
+            
+        

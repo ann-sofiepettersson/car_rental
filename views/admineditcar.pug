@@ -1,0 +1,68 @@
+extends index
+
+block content
+    div.editcar-box
+        form(method='PATCH' action='/editcar/edit')
+            .row
+                .col-sm-6
+                    div.form-group
+                        label(for='editbrand') Märke:
+                        input#editbrand.form-control(type='text', placeholder='Märke' name='brand') 
+                .col-sm-6
+                    div.form-group
+                        label(for='editmodel') Modell:
+                        input#editmodel.form-control(type='text', placeholder='Modell' name='model')
+            .row
+                .col-sm-6
+                    div.form-group
+                        label(for='editregnr') Regnr:
+                        input#editregnr.form-control(type='text', placeholder='Regnr' name='regnr')
+                .col-sm-6
+                    div.form-group
+                        label(for='edityear') Årsmodell:
+                        input#edityear.form-control(type='text', placeholder='Årsmodell' name='year')
+            .row
+                .col-sm-6
+                    div.form-group
+                        label(for='editroofrack') Takräcke:
+                        select#editroofrack.form-control(name='roofrack')
+                            option
+                            option Ja
+                            option Nej
+                .col-sm-6                     
+                    div.form-group
+                        label(for='editgearbox') Växellåda:
+                        select#editgearbox.form-control(name='gearbox')
+                            option
+                            option Ja
+                            option Nej
+            .row
+                .col-sm-6
+                    div.form-group
+                        label(for='editseats') Storlek:
+                        select#editseats.form-control(name='seats')
+                            option
+                            option 2-sits
+                            option 5-sits
+                            option 7-sits
+                .col-sm-6
+                    div.form-group
+                        label(for='editprice') Pris:
+                        select#editprice.form-control(name='price')
+                            option
+                            option 600
+                            option 900
+                            option 1200
+            .row
+                .col-sm-6
+                    div.form-group
+                        label(for='editfrom') Från:
+                        input#editfrom.form-control(type='text', placeholder='Från', name='', disabled) 
+                .col-sm-6
+                    div.form-group
+                        label(for='editto') Till:
+                        input#editto.form-control(type='text', placeholder='Till', name='', disabled)
+            .row
+                .col-sm-12
+                    div.form-group
+                        a#editCar.btn.btn-primary(href='/caredit/edit', role='button') Ändra

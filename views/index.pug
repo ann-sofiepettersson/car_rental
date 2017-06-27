@@ -1,0 +1,86 @@
+html(lang="en")
+    include includes/head.pug
+    body
+        .background-img.img-responsive
+            // Static navbar
+            .navbar.navbar-default(role='navigation')
+                .container-fluid
+                    .navbar-header
+                        button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                            span.sr-only Toggle navigation
+                            span.icon-bar
+                            span.icon-bar
+                            span.icon-bar
+                        a.navbar-brand(href='/') Car Rental Supreme
+                    .navbar-collapse.collapse
+                        ul.nav.navbar-nav
+                            li
+                                a(href='#booking', data-toggle='tab') Boka
+                            li#cancelTab
+                                a(href='#cancelBooking', data-toggle='tab') Avboka
+                            
+                        .navbar-nav.navbar-right
+                            li
+                                a(href='/admincarlist') Admin
+                .container.flexbox
+                    block content
+                    
+                        div.search-box
+                            .tab-content
+                                .tab-pane#booking
+                                    form#searchForm(method='GET' action='/carlist')
+                                        .row
+                                            .col-sm-6
+                                                div.form-group
+                                                    label(for='fromDate') Från
+                                                    input#fromDate.form-control(type='date', placeholder='Från och med', name='')
+                                            .col-sm-6
+                                                div.form-group
+                                                    label(for='toDate') Till
+                                                    input#toDate.form-control(type='date', placeholder='Till och med', name='')
+                                        .row
+                                            .col-sm-6
+                                                label.checkbox-inline
+                                                    input(type='checkbox')
+                                                    | Dragkrok
+                                                label.checkbox-inline
+                                                    input(type='checkbox') 
+                                                    | Takräcke
+                                            .col-sm-6
+                                                    label.checkbox-inline Storlek:
+                                                        input(type='checkbox' name='seats') 
+                                                        | 2-sits
+                                                    label.checkbox-inline 
+                                                        input(type='checkbox' name='seats')
+                                                        | 5-sits
+                                                    label.checkbox-inline 
+                                                        input(type='checkbox' name='seats') 
+                                                        | 7-sits
+                                        .row
+                                            .col-sm-6
+                                                .form-group
+                                                    label.radio-inline Växellåda:
+                                                        input(type='radio') 
+                                                        | Automat
+                                                    label.radio-inline
+                                                        input(type='radio') 
+                                                        | Manuell
+                                            .col-sm-6
+                                                button#searchCars.btn.btn-primary.search-btn(type='submit') Sök bilar
+                                .tab-pane#cancelBooking
+                                    form#deleteForm(method='DELETE' action='/')
+                                        .row  
+                                            .col-sm-6
+                                                div.form-group
+                                                    label(for='bookingId') Bokningsnr
+                                                    input#bookingId.form-control(type='text', placeholder='Fyll i ditt bokningsnummer', name='bookingsid')
+                                            
+                                            .col-sm-6
+                                                div.form-group
+                                                    button.btn.btn-danger.cancel-btn(type='submit') Ta bort bokning
+                            
+        
+                
+            
+        include includes/scripts.pug  
+        include includes/footer.pug

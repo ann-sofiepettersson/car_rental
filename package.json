@@ -1,0 +1,19 @@
+{
+  "name": "carrentalsupreme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Group07(Ann-Sofie,Joan,Albin)",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "mocha": "^3.4.2",
+    "mongodb": "^2.2.26",
+    "mongoose": "^4.10.2",
+    "pug": "^2.0.0-rc.1"
+  }
+}

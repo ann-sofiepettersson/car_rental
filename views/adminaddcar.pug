@@ -1,0 +1,74 @@
+extends index
+
+block content
+    div.addcar-box
+        a#backToList.btn.btn-success(href='/admincarlist', role='button') 
+            span.glyphicon.glyphicon-arrow-left
+            | Tillbaka till listan
+        h3 Lägg till ny bill
+        form(method='POST' action='/adminaddcar')
+            .row
+                .col-sm-6
+                    div.form-group
+                        label(for='addbrand') Märke:
+                        input#addbrand.form-control(type='text', placeholder='Märke' name='brand') 
+                .col-sm-6
+                    div.form-group
+                        label(for='addmodel') Modell:
+                        input#addmodel.form-control(type='text', placeholder='Modell' name='model')
+            .row
+                .col-sm-6
+                    div.form-group
+                        label(for='addregnr') Regnr:
+                        input#addregnr.form-control(type='text', placeholder='Regnr' name='regnr')
+                .col-sm-6
+                    div.form-group
+                        label(for='addyear') Årsmodell:
+                        input#addyear.form-control(type='text', placeholder='Årsmodell' name='year')
+            .row
+                .col-sm-6
+                    div.form-group
+                        label(for='addroofrack') Takräcke:
+                        select#addroofrack.form-control(name='roofrack')
+                            option
+                            option Ja
+                            option Nej
+                .col-sm-6                     
+                    div.form-group
+                        label(for='addgearbox') Växellåda:
+                        select#addgearbox.form-control(name='gearbox')
+                            option
+                            option Manuell
+                            option Automat
+            .row
+                .col-sm-6
+                    div.form-group
+                        label(for='addseats') Storlek:
+                        select#addseats.form-control(name='seats')
+                            option
+                            option 2-sits
+                            option 5-sits
+                            option 7-sits
+                .col-sm-6
+                    div.form-group
+                        label(for='addprice') Pris:
+                        select#addprice.form-control(name='price')
+                            option
+                            option 600
+                            option 900
+                            option 1200
+            .row
+                .col-sm-6
+                    div.form-group
+                        label(for='addfrom') Från:
+                        input#addfrom.form-control(type='text', placeholder='Från', name='', disabled) 
+                .col-sm-6
+                    div.form-group
+                        label(for='addto') Till:
+                        input#addto.form-control(type='text', placeholder='Till', name='', disabled)
+            .row
+                .col-sm-12
+                    div.form-group
+                        button#addCar.btn.btn-success.btn-block(type='submit') Lägg till
+                        
+                    

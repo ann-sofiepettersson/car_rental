@@ -1,0 +1,39 @@
+extends index
+
+block content
+    a#newSearch.btn.btn-default.btn-block(href='/', role='button') Ny sökning
+    div.list-box
+        each car in cars
+            form(action='/carlist', method='POST')
+                .row.carlist-item
+                    .col-sm-3
+                        img(src=(car.img_url))
+                    .col-sm-9
+                        .row
+                            .col-sm-12.col-md-4.col-lg-4
+                                span Märke: #{car.brand}
+                            .col-sm-12.col-md-4.col-lg-4
+                                span Model: #{car.model}
+                            .col-sm-12.col-md-4.col-lg-4
+                                span Årsmodell: #{car.year}
+                        .row
+                            .col-sm-12.col-md-4.col-lg-4
+                                span Takräcke: #{car.roofrack}
+                            .col-sm-12.col-md-4.col-lg-4
+                                span Växellåda: #{car.gearbox}
+                            .col-sm-12.col-md-4.col-lg-4
+                                span Storlek: #{car.seats}
+                        .row
+                            .col-sm-12.col-md-4.col-lg-4
+                                span#fr Från: #{car.from}
+                                
+                            .col-sm-12.col-md-4.col-lg-4
+                                spann#to Till: #{car.to}
+                                
+                            .col-sm-12.col-md-4.col-lg-4
+                                span Pris: #{car.price}
+                        .row
+                            .col-sm-12
+                                a.btn.btn-default.btn-block(href='/customerform', type='submit', role='button') Välj bil
+                        
+                
